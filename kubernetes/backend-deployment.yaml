@@ -24,9 +24,13 @@ spec:
       labels:
         app: backend
     spec:
+      # ADD THIS SECTION TO USE THE DOCKER HUB SECRET
+      imagePullSecrets:
+      - name: regcred
       containers:
       - name: backend
-        image: chari9515/ecommerce-backend:latest
+        # CORRECTED: Using the :v1 tag you pushed
+        image: chari9515/ecommerce-backend:v1
         ports:
         - containerPort: 5000
         env:
