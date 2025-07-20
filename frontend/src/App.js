@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react'; // Removed useCallback
 
 // NOTE: The 'process' object from Node.js is not available in the browser.
 // The error "process is not defined" suggests the execution environment is not
@@ -7,7 +7,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 // To fix this for local development, we are temporarily hardcoding the API URL.
 // The Docker build process (defined in docker-compose.yaml and Dockerfile)
 // is correctly configured to handle this variable, so it will work when containerized.
-const API_URL = 'http://localhost:5000/api';
+// Removed the unused API_URL constant
+// const API_URL = 'http://localhost:5000/api';
 // Original line for reference (used by the Docker build process):
 // const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
